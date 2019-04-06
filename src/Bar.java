@@ -15,7 +15,7 @@ public class Bar extends JLabel implements KeyListener{
 	
 	public Bar() {
 		//PlayerBar
-		this.setSize(32,32);
+		this.setSize(64,32);
 		this.setLocation(512, 922);
 		this.setIcon(new ImageIcon("Assets/playerBar.png")); 
 		
@@ -23,7 +23,7 @@ public class Bar extends JLabel implements KeyListener{
 	
 	public void move() {
 		int x = this.getX();
-		int maxX = 1024 - 42;
+		int maxX = 1024 - 74;
 		int minX = speed;
 		
 		if(x < minX) {
