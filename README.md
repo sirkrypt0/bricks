@@ -1,1 +1,2 @@
-# bricks
+# Bricks
+A classic bricks game.
