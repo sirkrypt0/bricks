@@ -2,13 +2,15 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
+import javax.swing.Timer;
 
 
 public class Bar extends JLabel implements KeyListener{
 	
-	private int speed = 5;
+	private int speed = 10;
 	private int velX = 0;
 	
 	public Bar() {
@@ -16,7 +18,6 @@ public class Bar extends JLabel implements KeyListener{
 		this.setSize(32,32);
 		this.setLocation(512, 922);
 		this.setIcon(new ImageIcon("Assets/playerBar.png")); 
-		
 		
 	}
 	
@@ -34,10 +35,9 @@ public class Bar extends JLabel implements KeyListener{
 		
 		if(x > minX && velX < 0 || x < maxX && velX > 0 )
 			this.setLocation(x+velX, this.getY());
-		
-		
-	}
 
+	}
+	
 	@Override
 	public void keyPressed(KeyEvent event) {
 		
