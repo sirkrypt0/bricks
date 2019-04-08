@@ -10,19 +10,22 @@ public class GUI {
 	private JFrame MainFrame;
 	
 	private Bar bar;
+	private Block brick;
 	
 	public GUI() {
 		
 		MainFrame  = new JFrame("Bricks");
 		bar = new Bar();
+		brick = new Block();
+		
 		
 		//Ball
 		imageBall.setSize(32, 32);
 		imageBall.setLocation(512,512);
 		
 		//Brick
-		imageBrick.setSize(32, 32);
-		imageBrick.setLocation(512, 205);
+		//imageBrick.setSize(32, 32);
+		//imageBrick.setLocation(512, 205);
 		
 		//MainFrame params
 		
@@ -37,7 +40,7 @@ public class GUI {
 		
 		MainFrame.add(bar);
 		MainFrame.add(imageBall);
-		MainFrame.add(imageBrick);
+		MainFrame.add(brick);
 		//MainFrame.add(imagePlayerBar);
 		
 		MainFrame.setVisible(true);
@@ -47,4 +50,11 @@ public class GUI {
 		bar.move();
 	}
 
+	/*public static void createBricks(int row, int col) {
+		for(int i = 0; i < row; i++) {
+			for(int j = 0; j < col; j++) {
+				bricks[k] = new Block();
+			}
+		}
+	}*/
 }
